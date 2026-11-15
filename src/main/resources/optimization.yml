@@ -1,0 +1,61 @@
+# XY-OPTIMIZATION | XY STUDIO | YEO404.JAR
+# Everything here can be toggled in-game with /xyopti toggle <feature> or the menus.
+
+performance:
+  # -1 = keep the server's own value. Otherwise set for ALL worlds (2-32).
+  view-distance: -1
+  simulation-distance: -1
+  # Adaptive mode lowers view/simulation distance step by step while TPS is low
+  # and restores it when TPS is healthy again.
+  adaptive:
+    enabled: true
+    check-interval-seconds: 10
+    low-tps: 17.5
+    high-tps: 19.5
+    min-view-distance: 6
+    min-simulation-distance: 4
+    max-reduction: 4
+
+# Emergency mode: when TPS falls below the limit, junk is cleared immediately.
+emergency:
+  enabled: true
+  tps: 15.0
+  cooldown-seconds: 120
+  clear-items: true
+  clear-xp: true
+  clear-projectiles: true
+  clear-mobs: false
+
+# Automatic cleanup with a countdown warning
+auto-clear:
+  enabled: true
+  interval-minutes: 5     # minutes between cleanups
+  warn-seconds: [30, 10, 5, 3, 2, 1]
+  items: true
+  mobs: false
+  projectiles: true
+  xp: true
+  broadcast: true
+
+cleanup:
+  # Dropped items younger than this (ticks) are never removed
+  item-protect-ticks: 60
+  # Materials that are never removed, example: [NETHERITE_INGOT, ELYTRA, SHULKER_BOX]
+  ignore-materials: []
+  mobs:
+    # HOSTILE = only monsters/slimes/phantoms/ghasts, ALL = every mob
+    mode: HOSTILE
+    # EntityType names that are never removed, example: [IRON_GOLEM, ALLAY]
+    ignore-types: []
+  # Named, leashed, tamed, riding/ridden mobs, villagers, bosses and NPCs are ALWAYS protected.
+
+# Per-chunk limits (the oldest extra entities are removed)
+limits:
+  enabled: true
+  scan-interval-seconds: 10
+  chunks-per-tick: 25
+  max-items-per-chunk: 128
+  mobs:
+    enabled: true
+    mode: HOSTILE
+    max-per-chunk: 60

@@ -1,0 +1,21 @@
+# XY-OPTIMIZATION | XY STUDIO | YEO404.JAR
+# REDSTONE CONTROL  (/xyopti redstone enable|disable|status [world])
+# The current on/off state is saved in data/state.yml.
+
+# Used only the very first time (before anything is saved)
+default-enabled: true
+
+# While redstone is disabled (or a chunk is frozen) pistons do not move
+cancel-pistons-when-disabled: true
+
+# Dispensers/droppers/hoppers inside a FROZEN chunk are stopped too
+cancel-dispensers-when-frozen: true
+cancel-hoppers-when-frozen: true
+
+# REDSTONE LIMITER
+# Limits how many redstone updates ONE chunk may do per second. Updates above the limit are
+# held until the next second, so a fast clock can no longer eat the whole tick.
+# (Lag machine detection still sees every attempted update.)
+limiter:
+  enabled: true
+  max-updates-per-second: 1000

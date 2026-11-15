@@ -1,0 +1,52 @@
+# XY-OPTIMIZATION | XY STUDIO | YEO404.JAR
+# Colors: &a &c ... and hex &#RRGGBB.
+# Theme colors from config.yml: write &%safe% (light blue) or &%problem% (light green).
+# Placeholders are written like %name%.
+
+prefix: "&%safe%&lXY-OPTI &8» &7"
+
+no-permission: "&%problem%You do not have permission to do that."
+player-only: "&%problem%Only players can use this."
+unknown-command: "&%problem%Unknown command. Use &f/xyopti help"
+usage: "&%problem%Usage: &f%usage%"
+reloaded: "&%safe%All XY-OPTIMIZATION files were reloaded."
+unknown-world: "&%problem%World &f%world% &%problem%was not found."
+unknown-page: "&%problem%That menu page does not exist."
+
+redstone-changed: "&7Redstone is now %state% &7for &f%scope%&7."
+redstone-on: "&%safe%ENABLED"
+redstone-off: "&%problem%DISABLED"
+
+clear-done: "&%safe%Cleanup finished: &f%items% &7items, &f%mobs% &7mobs, &f%projectiles% &7projectiles, &f%xp% &7xp orbs removed."
+auto-clear-warning: "&%safe%&lXY-OPTI &8» &7Auto-clear in &f%seconds%s&7. Pick up your items!"
+auto-clear-done: "&%safe%&lXY-OPTI &8» &7Auto-clear removed &f%items% &7items and &f%mobs% &7mobs. Server lag reduced!"
+emergency: "&%problem%&lLOW TPS (%tps%)! &7Emergency cleanup removed &f%items% &7items, &f%mobs% &7mobs."
+
+lag-machine-detected: "&%problem%&lLAG MACHINE DETECTED &f<%x%, %y%, %z%> &%problem%%world%"
+lag-machine-detail: "&7Type: &f%type% &8| &7%detail% &8| &7ID: &f#%id%"
+lag-machine-frozen: "&%problem%Chunk frozen for &f%seconds%s &7(&f/xyopti unfreeze&7)"
+lag-machine-teleport-button: "&%safe%[TELEPORT]"
+lag-machine-teleport-hover: "&7Click to teleport to the lag machine"
+# Announcement line (like /bc). %coords% is "<x, y, z> world" or "a lag machine" when hidden.
+lag-announce: "&%problem%&lLAG MACHINE DETECTED &7%coords%&8: &f%type%"
+lag-none: "&7No lag machines were detected yet."
+lag-cleared: "&%safe%Lag machine history cleared."
+lag-not-found: "&%problem%Incident &f#%id% &%problem%was not found."
+lag-tp-done: "&%safe%Teleported to lag machine &f#%id%&7."
+
+freeze-done: "&%safe%Froze redstone, pistons, dispensers and hoppers in this chunk for &f%seconds%s&7."
+unfreeze-done: "&%safe%Unfroze &f%count% &7chunk(s)."
+
+distance-set: "&%safe%View distance &f%view% &8| &%safe%Simulation distance &f%sim% &7(all worlds)"
+adaptive-reduced: "&%problem%TPS is low, view distance lowered to &f%view% &7/ simulation &f%sim%&7."
+adaptive-restored: "&%safe%TPS is healthy, view distance restored to &f%view% &7/ simulation &f%sim%&7."
+
+toggle-changed: "&7Feature &f%feature% &7is now %state%&7."
+toggle-on: "&%safe%ON"
+toggle-off: "&%problem%OFF"
+unknown-toggle: "&%problem%Unknown feature. Use: &f%list%"
+profiler-reset: "&%safe%Profiler data reset."
+
+config-set: "&%safe%%label% &7is now &f%value%&7."
+config-bad-value: "&%problem%Bad value for &f%id%&7: %reason%"
+config-unknown: "&%problem%Unknown setting &f%id%&7. Use &f/xyopti config &7to see all."

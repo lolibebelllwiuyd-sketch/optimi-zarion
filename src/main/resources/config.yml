@@ -1,0 +1,37 @@
+####################################################################
+#  XY-OPTIMIZATION                                                  #
+#  PLUGIN BY: XY STUDIO            AUTHOR: YEO404.JAR               #
+#  Discord: https://discord.gg/acx8GFwY4v                           #
+####################################################################
+
+# Permissions
+#  xyopti.admin  - every /opti and /xyopti command   (default: op)
+#  xyopti.alerts - receive LAG MACHINE DETECTED alerts    (default: op)
+#
+# Files in this folder
+#  config.yml        - this file (general)
+#  optimization.yml  - cleanup, entity limits, view distance, emergency mode
+#  lag-machine.yml   - lag machine detector
+#  redstone.yml      - redstone control
+#  messages.yml      - every message (colors: & codes and &#RRGGBB)
+#  data/state.yml    - runtime state saved by the plugin (do not edit)
+#  logs/             - lag machine log
+
+# Use the Minecraft dialog menus (needs Paper 1.21.6+).
+# If false the /opti menus are disabled (use /xyopti text commands).
+use-dialogs: true
+
+# The profiler samples what the server thread is doing to show which
+# plugins use the most tick time (the "Plugins Causing TPS Drop" list).
+profiler:
+  enabled: true
+  sample-interval-ms: 50
+
+# Menu / message colors (hex). The menus use ONE accent color:
+#   safe    = everything is fine
+#   problem = TPS is low, a lag machine was detected, or chunks are frozen
+theme:
+  safe: "#7DD3FC"      # light blue
+  problem: "#86EFAC"   # light green
+  problem-tps: 18.0    # below this TPS the menu shows the problem color
+  problem-minutes: 10  # a lag machine detected in the last X minutes = problem

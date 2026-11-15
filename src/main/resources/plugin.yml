@@ -1,0 +1,26 @@
+name: XY-OPTIMIZATION
+version: '1.1.1'
+main: de.YEO404.xyoptimization.XYOptimization
+api-version: '1.21'
+author: YEO404.JAR
+description: ᴏᴘᴛɪᴍɪᴢᴀᴛɪᴏɴ ᴘʟᴜɢɪɴ - ᴘʟᴜɢɪɴ ʙʏ xy studio
+website: https://discord.gg/acx8GFwY4v
+
+commands:
+  opti:
+    description: XY-OPTIMIZATION dialog menus
+    usage: /opti
+  xyopti:
+    description: XY-OPTIMIZATION text commands
+    usage: /xyopti help
+    aliases: [xyoptimization, xyopt]
+
+permissions:
+  xyopti.admin:
+    description: Allows every /opti and /xyopti command
+    default: op
+    children:
+      xyopti.alerts: true
+  xyopti.alerts:
+    description: Receive LAG MACHINE DETECTED alerts
+    default: op

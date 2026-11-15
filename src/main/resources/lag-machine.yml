@@ -1,0 +1,45 @@
+# XY-OPTIMIZATION | XY STUDIO | YEO404.JAR
+# LAG MACHINE DETECTOR
+# Every <window-seconds> the plugin checks how many redstone updates, piston moves,
+# dispenser shots and hopper transfers happened in each chunk. If a chunk goes over
+# a threshold (per second) it is reported as a lag machine.
+
+enabled: true
+window-seconds: 5
+
+thresholds-per-second:
+  redstone: 800
+  piston: 100
+  dispenser: 100
+  hopper: 400
+
+# Too many entities packed in one chunk (cramming / entity lag machines)
+entity-overload:
+  enabled: true
+  entities-per-chunk: 300
+
+# The same chunk + type is only reported once per this many seconds
+alert-cooldown-seconds: 60
+
+notify:
+  players: true     # players with xyopti.alerts
+  console: true
+  sound: true
+
+history-size: 50
+
+auto-action:
+  # Freeze the chunk's redstone/pistons/dispensers/hoppers for a while
+  freeze: true
+  freeze-seconds: 300
+
+# ANNOUNCE (like /bc or /announce) when a lag machine is detected
+announce:
+  enabled: true
+  # true  = only admins (xyopti.alerts) see it, false = everybody on the server sees it
+  admins-only: true
+  # false = the public message says "a lag machine" without the location
+  show-coordinates: true
+  # Optional console command to run too, for example: "bc %message%" or "announce %message%"
+  # Leave empty to not run any command.
+  command: ""
